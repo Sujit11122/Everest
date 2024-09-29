@@ -1,10 +1,21 @@
+import Link from "next/link";
 export default function Navbar(){
     return(
         <nav className="bg-white border-gray-300 dark:bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <button className=" text-white px-1 py-1">Home</button>
-                <button className="text-white px-1 py-1">About</button>
-                <button className="text-white">Help</button>
+                <button className=" text-white px-1 py-1">
+                    <Link href="/">
+                    Home
+                    </Link></button>
+                <button className="text-white px-1 py-1">
+                    <Link href="/about" >
+                    About
+                    </Link>
+                    </button>
+                <button className="text-white">
+                    <Link href="/help">
+                    Help</Link></button>
+                   
                 <div className="search">
                     <form>
                         <input type="text" placeholder="Search..."></input>
